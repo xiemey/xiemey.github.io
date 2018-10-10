@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 	<head>
@@ -10,12 +11,43 @@
 		<script src="js/jquery.poptrox.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/pdfobject.min.js"></script>
+		<script src="js/pdfobject.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+
+
+		<script type='text/javascript'>
+	 window.onload=function(){new PDFObject({ 
+     url: 'images/简历.pdf', 
+     pdfOpenParams: { 
+          view: 'Fit', 
+          scrollbars: '0', 
+          toolbar: '0', 
+          statusbar: '0', 
+          navpanes: '0' }
+      }).embed('pdf1'); 
+	  };
+	  
+	  // 点击触发 targetDivId:展示pdf的divid。pdfurl：pdf资源路径
+	  function readMe(targetDivId,pdfurl){
+	   new PDFObject({ 
+     	url: pdfurl, 
+     	pdfOpenParams: { 
+          view: 'Fit', 
+          scrollbars: '0', 
+          toolbar: '0', 
+          statusbar: '0', 
+          navpanes: '0' }
+       }).embed(targetDivId); 
+	  }
+</script>
+
+
 	</head>
 	<body id="top">
 
@@ -35,6 +67,7 @@
 						<header class="major">
 							<h2>个人简历<br />
 							</h2>
+							<li><a href="images/简历.pdf">查看简历</a></li>
 						</header>
 						<p>姓名：谢梦雨   <br/>
 						   学历：本科<br/>
@@ -48,7 +81,7 @@
 					
 					
 					<section>
-							<h4>学习经历</h4>
+							<h2>学习经历</h2>
 							<div class="row">
 								<div class="6u 12u$(3)">
 									<h5>C语言</h5>
@@ -61,7 +94,6 @@
 									<ul class="alt">
 										<li>有一定的Java基础</li>
 										<li>在Java的基础上会使用Javaweb开发网站</li>
-										<li>能使用ssh框架，ssm框架开发网站</li>
 										
 									</ul>
 									<h5>Java框架</h5>
@@ -96,7 +128,21 @@
 					
 					
 					<section>
-							<h4>技能介绍</h4>
+							<h2>技能介绍</h2>
+							<div>
+								<h5>博客园地址:</h5>
+									<ul class="icons">
+										<li>
+											<a href="https://www.cnblogs.com/x-m-/">https://www.cnblogs.com/x-m-/</a>
+										</li>
+									</ul>
+									<h5>github地址:</h5>
+									<ul class="icons">
+										<li>
+											<a href="https://github.com/xiemey">https://github.com/xiemey</a>
+										</li>
+									</ul>
+							</div>
 							<div class="row">
 								<div class="6u 12u$(3)">
 									<h5>C语言</h5>
@@ -118,11 +164,7 @@
 										<li>使用ssh框架修改升级了之前的项目</li>
 										
 									</ul>
-									<h5>ssm框架</h5>
-									<ul class="alt">
-										
-										<li>使用ssm框架开发了学生成绩管理系统</li>
-									</ul>
+									
 								</div>
 								<div class="6u$ 12u$(3)">
 									<h5>Hadoop</h5>
@@ -136,17 +178,10 @@
 										<li>能用Android开发APP</li>
 										<li>开发过基于互联网的智能车载APP</li>
 									</ul>
-									<h5>博客园地址:</h5>
-									<ul class="icons">
-										<li>
-											<a href="https://www.cnblogs.com/x-m-/">https://www.cnblogs.com/x-m-/</a>
-										</li>
-									</ul>
-									<h5>github地址:</h5>
-									<ul class="icons">
-										<li>
-											<a href="https://github.com/xiemey">https://github.com/xiemey</a>
-										</li>
+									<h5>ssm框架</h5>
+									<ul class="alt">
+										
+										<li>使用ssm框架开发了学生成绩管理系统</li>
 									</ul>
 								</div>
 							</div>
@@ -164,17 +199,26 @@
 						<div class="row">
 							<article class="6u 12u$(3) work-item">
 								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>学生课程管理系统</h3>
-								<p>基于ssm框架，</p>
+								<h3>学生课程管理系统:基于ssm框架，使用MySQL数据库</h3>
+								
+								
+								<a href="https://github.com/xiemey/resp/tree/master/%E5%9F%BA%E4%BA%8Essm%E6%A1%86%E6%9E%B6%E7%9A%84%E7%8F%AD%E7%BA%A7%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F">GitHub地址</a>
+								<p></p>
 							</article>
 							<article class="6u$ 12u$(3) work-item">
 								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
 								<h3>智能车载APP</h3>
 								<p>Android项目</p>
+								
+								<a href="https://github.com/xiemey/resp/tree/master/%E5%9F%BA%E4%BA%8E%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E6%99%BA%E8%83%BD%E8%BD%A6%E8%BD%BDAPP/BmobSample-master">GitHub地址</a>
+								<p></p>
 							</article>
 							<article class="6u 12u$(3) work-item">
 								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
 								<h3>河北省重大技术征集系统</h3>
+								<p></p>
+								
+								<a href="https://github.com/xiemey/resp/tree/master/%E6%B2%B3%E5%8C%97%E7%9C%81%E9%87%8D%E5%A4%A7%E6%8A%80%E6%9C%AF%E5%BE%81%E9%9B%86">GitHub地址</a>
 								<p></p>
 							</article>
 							
